@@ -28,110 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.uploadBTN = new System.Windows.Forms.Button();
+            this.searchBTN = new System.Windows.Forms.Button();
+            this.deleteBTN = new System.Windows.Forms.Button();
+            this.renameBTN = new System.Windows.Forms.Button();
+            this.newBTN = new System.Windows.Forms.Button();
+            this.updateBTN = new System.Windows.Forms.Button();
+            this.exportBTN = new System.Windows.Forms.Button();
+            this.profileBTN = new System.Windows.Forms.Button();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.settingsBTN = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // uploadBTN
             // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 24);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Upload";
-            this.button1.UseVisualStyleBackColor = true;
+            this.uploadBTN.Location = new System.Drawing.Point(3, 3);
+            this.uploadBTN.Name = "uploadBTN";
+            this.uploadBTN.Size = new System.Drawing.Size(109, 24);
+            this.uploadBTN.TabIndex = 0;
+            this.uploadBTN.Text = "Upload";
+            this.uploadBTN.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // searchBTN
             // 
-            this.button2.Location = new System.Drawing.Point(3, 33);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = true;
+            this.searchBTN.Location = new System.Drawing.Point(3, 33);
+            this.searchBTN.Name = "searchBTN";
+            this.searchBTN.Size = new System.Drawing.Size(109, 23);
+            this.searchBTN.TabIndex = 1;
+            this.searchBTN.Text = "Search";
+            this.searchBTN.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // deleteBTN
             // 
-            this.button3.Location = new System.Drawing.Point(3, 62);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
+            this.deleteBTN.Location = new System.Drawing.Point(3, 62);
+            this.deleteBTN.Name = "deleteBTN";
+            this.deleteBTN.Size = new System.Drawing.Size(109, 23);
+            this.deleteBTN.TabIndex = 2;
+            this.deleteBTN.Text = "Delete";
+            this.deleteBTN.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // renameBTN
             // 
-            this.button4.Location = new System.Drawing.Point(3, 91);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(109, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Rename";
-            this.button4.UseVisualStyleBackColor = true;
+            this.renameBTN.Location = new System.Drawing.Point(3, 91);
+            this.renameBTN.Name = "renameBTN";
+            this.renameBTN.Size = new System.Drawing.Size(109, 23);
+            this.renameBTN.TabIndex = 3;
+            this.renameBTN.Text = "Rename";
+            this.renameBTN.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // newBTN
             // 
-            this.button5.Location = new System.Drawing.Point(3, 120);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(109, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "New";
-            this.button5.UseVisualStyleBackColor = true;
+            this.newBTN.Location = new System.Drawing.Point(3, 120);
+            this.newBTN.Name = "newBTN";
+            this.newBTN.Size = new System.Drawing.Size(109, 23);
+            this.newBTN.TabIndex = 4;
+            this.newBTN.Text = "New";
+            this.newBTN.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // updateBTN
             // 
-            this.button6.Location = new System.Drawing.Point(3, 149);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(109, 23);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Update";
-            this.button6.UseVisualStyleBackColor = true;
+            this.updateBTN.Location = new System.Drawing.Point(3, 149);
+            this.updateBTN.Name = "updateBTN";
+            this.updateBTN.Size = new System.Drawing.Size(109, 23);
+            this.updateBTN.TabIndex = 5;
+            this.updateBTN.Text = "Update";
+            this.updateBTN.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // exportBTN
             // 
-            this.button7.Location = new System.Drawing.Point(3, 178);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(109, 23);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Export";
-            this.button7.UseVisualStyleBackColor = true;
+            this.exportBTN.Location = new System.Drawing.Point(3, 178);
+            this.exportBTN.Name = "exportBTN";
+            this.exportBTN.Size = new System.Drawing.Size(109, 23);
+            this.exportBTN.TabIndex = 6;
+            this.exportBTN.Text = "Export";
+            this.exportBTN.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // profileBTN
             // 
-            this.button8.Location = new System.Drawing.Point(3, 207);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(109, 23);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Profile";
-            this.button8.UseVisualStyleBackColor = true;
+            this.profileBTN.Location = new System.Drawing.Point(3, 207);
+            this.profileBTN.Name = "profileBTN";
+            this.profileBTN.Size = new System.Drawing.Size(109, 23);
+            this.profileBTN.TabIndex = 7;
+            this.profileBTN.Text = "Profile";
+            this.profileBTN.UseVisualStyleBackColor = true;
             // 
             // vScrollBar1
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(635, 0);
+            this.vScrollBar1.Location = new System.Drawing.Point(633, 0);
             this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(17, 432);
+            this.vScrollBar1.Size = new System.Drawing.Size(19, 432);
             this.vScrollBar1.TabIndex = 8;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.button1);
-            this.flowLayoutPanel1.Controls.Add(this.button2);
-            this.flowLayoutPanel1.Controls.Add(this.button3);
-            this.flowLayoutPanel1.Controls.Add(this.button4);
-            this.flowLayoutPanel1.Controls.Add(this.button5);
-            this.flowLayoutPanel1.Controls.Add(this.button6);
-            this.flowLayoutPanel1.Controls.Add(this.button7);
-            this.flowLayoutPanel1.Controls.Add(this.button8);
+            this.flowLayoutPanel1.Controls.Add(this.uploadBTN);
+            this.flowLayoutPanel1.Controls.Add(this.searchBTN);
+            this.flowLayoutPanel1.Controls.Add(this.deleteBTN);
+            this.flowLayoutPanel1.Controls.Add(this.renameBTN);
+            this.flowLayoutPanel1.Controls.Add(this.newBTN);
+            this.flowLayoutPanel1.Controls.Add(this.updateBTN);
+            this.flowLayoutPanel1.Controls.Add(this.exportBTN);
+            this.flowLayoutPanel1.Controls.Add(this.profileBTN);
+            this.flowLayoutPanel1.Controls.Add(this.settingsBTN);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 6);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -146,6 +148,15 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(652, 432);
             this.flowLayoutPanel2.TabIndex = 10;
+            // 
+            // settingsBTN
+            // 
+            this.settingsBTN.Location = new System.Drawing.Point(3, 236);
+            this.settingsBTN.Name = "settingsBTN";
+            this.settingsBTN.Size = new System.Drawing.Size(109, 23);
+            this.settingsBTN.TabIndex = 8;
+            this.settingsBTN.Text = "Settings";
+            this.settingsBTN.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -164,17 +175,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button uploadBTN;
+        private System.Windows.Forms.Button searchBTN;
+        private System.Windows.Forms.Button deleteBTN;
+        private System.Windows.Forms.Button renameBTN;
+        private System.Windows.Forms.Button newBTN;
+        private System.Windows.Forms.Button updateBTN;
+        private System.Windows.Forms.Button exportBTN;
+        private System.Windows.Forms.Button profileBTN;
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Button settingsBTN;
     }
 }
 
