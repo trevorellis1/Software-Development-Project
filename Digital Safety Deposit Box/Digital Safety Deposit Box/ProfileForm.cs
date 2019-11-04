@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace windowsFormDotNetFramework
+namespace Digital_Safety_Deposit_Box
 {
     public partial class Profile : Form
     {
