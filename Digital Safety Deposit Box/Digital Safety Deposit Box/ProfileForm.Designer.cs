@@ -1,4 +1,4 @@
-﻿namespace windowsFormDotNetFramework
+﻿namespace Digital_Safety_Deposit_Box
 {
     partial class Profile
     {
