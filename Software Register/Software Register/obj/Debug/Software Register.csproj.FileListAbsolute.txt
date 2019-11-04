@@ -1,0 +1,9 @@
+C:\Users\seans\source\repos\Software Register\Software Register\bin\Debug\Software Register.exe.config
+C:\Users\seans\source\repos\Software Register\Software Register\bin\Debug\Software Register.exe
+C:\Users\seans\source\repos\Software Register\Software Register\bin\Debug\Software Register.pdb
+C:\Users\seans\source\repos\Software Register\Software Register\obj\Debug\Software Register.csprojAssemblyReference.cache
+C:\Users\seans\source\repos\Software Register\Software Register\obj\Debug\Software_Register.Form1.resources
+C:\Users\seans\source\repos\Software Register\Software Register\obj\Debug\Software_Register.Properties.Resources.resources
+C:\Users\seans\source\repos\Software Register\Software Register\obj\Debug\Software Register.csproj.GenerateResource.cache
+C:\Users\seans\source\repos\Software Register\Software Register\obj\Debug\Software Register.exe
+C:\Users\seans\source\repos\Software Register\Software Register\obj\Debug\Software Register.pdb
