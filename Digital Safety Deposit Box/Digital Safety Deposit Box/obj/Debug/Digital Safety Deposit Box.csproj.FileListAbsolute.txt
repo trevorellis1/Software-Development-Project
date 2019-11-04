@@ -1,0 +1,10 @@
+C:\Users\seans\source\repos\Digital Safety Deposit Box\Digital Safety Deposit Box\bin\Debug\Digital Safety Deposit Box.exe.config
+C:\Users\seans\source\repos\Digital Safety Deposit Box\Digital Safety Deposit Box\bin\Debug\Digital Safety Deposit Box.exe
+C:\Users\seans\source\repos\Digital Safety Deposit Box\Digital Safety Deposit Box\bin\Debug\Digital Safety Deposit Box.pdb
+C:\Users\seans\source\repos\Digital Safety Deposit Box\Digital Safety Deposit Box\obj\Debug\Digital Safety Deposit Box.csprojAssemblyReference.cache
+C:\Users\seans\source\repos\Digital Safety Deposit Box\Digital Safety Deposit Box\obj\Debug\Digital_Safety_Deposit_Box.RegisterForm.resources
+C:\Users\seans\source\repos\Digital Safety Deposit Box\Digital Safety Deposit Box\obj\Debug\Digital_Safety_Deposit_Box.MainMenuForm.resources
+C:\Users\seans\source\repos\Digital Safety Deposit Box\Digital Safety Deposit Box\obj\Debug\Digital_Safety_Deposit_Box.Properties.Resources.resources
+C:\Users\seans\source\repos\Digital Safety Deposit Box\Digital Safety Deposit Box\obj\Debug\Digital Safety Deposit Box.csproj.GenerateResource.cache
+C:\Users\seans\source\repos\Digital Safety Deposit Box\Digital Safety Deposit Box\obj\Debug\Digital Safety Deposit Box.exe
+C:\Users\seans\source\repos\Digital Safety Deposit Box\Digital Safety Deposit Box\obj\Debug\Digital Safety Deposit Box.pdb
