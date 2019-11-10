@@ -38,7 +38,7 @@
             this.profileBTN = new System.Windows.Forms.Button();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.settingsBTN = new System.Windows.Forms.Button();
+            this.logoutBTN = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -133,21 +133,22 @@
             this.flowLayoutPanel1.Controls.Add(this.updateBTN);
             this.flowLayoutPanel1.Controls.Add(this.exportBTN);
             this.flowLayoutPanel1.Controls.Add(this.profileBTN);
-            this.flowLayoutPanel1.Controls.Add(this.settingsBTN);
+            this.flowLayoutPanel1.Controls.Add(this.logoutBTN);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 6);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(118, 432);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
-            // settingsBTN
+            // logoutBTN
             // 
-            this.settingsBTN.Location = new System.Drawing.Point(3, 236);
-            this.settingsBTN.Name = "settingsBTN";
-            this.settingsBTN.Size = new System.Drawing.Size(109, 23);
-            this.settingsBTN.TabIndex = 8;
-            this.settingsBTN.Text = "Settings";
-            this.settingsBTN.UseVisualStyleBackColor = true;
+            this.logoutBTN.Location = new System.Drawing.Point(3, 236);
+            this.logoutBTN.Name = "logoutBTN";
+            this.logoutBTN.Size = new System.Drawing.Size(109, 23);
+            this.logoutBTN.TabIndex = 8;
+            this.logoutBTN.Text = "Logout";
+            this.logoutBTN.UseVisualStyleBackColor = true;
+            this.logoutBTN.Click += new System.EventHandler(this.logoutBTN_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -163,10 +164,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "MainMenuForm";
-            this.Text = "Digital Safety Deposot Box - Main Menu";
+            this.Text = "Digital Safety Deposit Box - Main Menu";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -186,6 +188,6 @@
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Button settingsBTN;
+        private System.Windows.Forms.Button logoutBTN;
     }
 }

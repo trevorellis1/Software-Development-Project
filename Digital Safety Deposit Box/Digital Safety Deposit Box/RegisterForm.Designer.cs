@@ -42,6 +42,7 @@
             this.radioSuper = new System.Windows.Forms.RadioButton();
             this.radioGeneric = new System.Windows.Forms.RadioButton();
             this.radioAdmin = new System.Windows.Forms.RadioButton();
+            this.cancelBTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // regEmailLabel
@@ -91,12 +92,13 @@
             // 
             // RegisterBTN
             // 
-            this.RegisterBTN.Location = new System.Drawing.Point(258, 238);
+            this.RegisterBTN.Location = new System.Drawing.Point(200, 238);
             this.RegisterBTN.Name = "RegisterBTN";
             this.RegisterBTN.Size = new System.Drawing.Size(75, 23);
             this.RegisterBTN.TabIndex = 5;
             this.RegisterBTN.Text = "Register";
             this.RegisterBTN.UseVisualStyleBackColor = true;
+            this.RegisterBTN.Click += new System.EventHandler(this.RegisterBTN_Click);
             // 
             // regEmailBox
             // 
@@ -109,6 +111,7 @@
             // 
             this.regConfirmBox.Location = new System.Drawing.Point(200, 169);
             this.regConfirmBox.Name = "regConfirmBox";
+            this.regConfirmBox.PasswordChar = '*';
             this.regConfirmBox.Size = new System.Drawing.Size(180, 20);
             this.regConfirmBox.TabIndex = 8;
             // 
@@ -116,6 +119,7 @@
             // 
             this.regPassBox.Location = new System.Drawing.Point(200, 137);
             this.regPassBox.Name = "regPassBox";
+            this.regPassBox.PasswordChar = '*';
             this.regPassBox.Size = new System.Drawing.Size(180, 20);
             this.regPassBox.TabIndex = 9;
             // 
@@ -144,6 +148,7 @@
             this.radioSuper.TabStop = true;
             this.radioSuper.Text = "Super";
             this.radioSuper.UseVisualStyleBackColor = true;
+            this.radioSuper.CheckedChanged += new System.EventHandler(this.radioSuper_CheckedChanged);
             // 
             // radioGeneric
             // 
@@ -156,6 +161,7 @@
             this.radioGeneric.TabStop = true;
             this.radioGeneric.Text = "Generic";
             this.radioGeneric.UseVisualStyleBackColor = true;
+            this.radioGeneric.CheckedChanged += new System.EventHandler(this.radioGeneric_CheckedChanged);
             // 
             // radioAdmin
             // 
@@ -167,12 +173,25 @@
             this.radioAdmin.TabStop = true;
             this.radioAdmin.Text = "Admin";
             this.radioAdmin.UseVisualStyleBackColor = true;
+            this.radioAdmin.CheckedChanged += new System.EventHandler(this.radioAdmin_CheckedChanged);
+            // 
+            // cancelBTN
+            // 
+            this.cancelBTN.Location = new System.Drawing.Point(281, 238);
+            this.cancelBTN.Name = "cancelBTN";
+            this.cancelBTN.Size = new System.Drawing.Size(75, 23);
+            this.cancelBTN.TabIndex = 16;
+            this.cancelBTN.Text = "Cancel";
+            this.cancelBTN.UseVisualStyleBackColor = true;
+            this.cancelBTN.Click += new System.EventHandler(this.cancelBTN_Click);
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(576, 450);
+            this.ControlBox = false;
+            this.Controls.Add(this.cancelBTN);
             this.Controls.Add(this.radioAdmin);
             this.Controls.Add(this.radioGeneric);
             this.Controls.Add(this.radioSuper);
@@ -210,5 +229,6 @@
         private System.Windows.Forms.RadioButton radioSuper;
         private System.Windows.Forms.RadioButton radioGeneric;
         private System.Windows.Forms.RadioButton radioAdmin;
+        private System.Windows.Forms.Button cancelBTN;
     }
 }

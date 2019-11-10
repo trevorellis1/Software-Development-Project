@@ -17,3 +17,4 @@ C:\Users\seans\source\repos\Digital Safety Deposit Box\Digital Safety Deposit Bo
 C:\Users\seans\source\repos\Digital Safety Deposit Box\Digital Safety Deposit Box\bin\Debug\Renci.SshNet.xml
 C:\Users\seans\source\repos\Digital Safety Deposit Box\Digital Safety Deposit Box\obj\Debug\Digital Safety Deposit Box.csproj.CopyComplete
 C:\Users\seans\source\repos\Digital Safety Deposit Box\Digital Safety Deposit Box\obj\Debug\Digital_Safety_Deposit_Box.Profile.resources
+C:\Users\seans\source\repos\Digital Safety Deposit Box\Digital Safety Deposit Box\obj\Debug\Digital_Safety_Deposit_Box.LogIn.resources

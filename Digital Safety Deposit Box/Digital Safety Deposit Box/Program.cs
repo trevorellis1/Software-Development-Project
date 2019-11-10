@@ -17,7 +17,7 @@ namespace Digital_Safety_Deposit_Box
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RegisterForm());
+            Application.Run(new LogIn());
         }
     }
 }
