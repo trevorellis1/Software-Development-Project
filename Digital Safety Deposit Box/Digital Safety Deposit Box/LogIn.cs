@@ -59,7 +59,7 @@ namespace Digital_Safety_Deposit_Box
             DataTable dt = new DataTable();
             searchCredentials.Fill(dt);
 
-            if (dt.Rows.Count == 2)
+            if (dt.Rows.Count == 1)
             {
                 rememberMe = true;
                 checkBox1.Checked = true;
@@ -72,12 +72,12 @@ namespace Digital_Safety_Deposit_Box
                         {
                             if (count == 0)
                             {
-                                textBox2.Text = item.ToString();
+                                textBox1.Text = item.ToString();
                                 //Console.WriteLine(item);
                             }
                             if (count == 1)
                             {
-                                textBox1.Text = item.ToString();
+                                textBox2.Text = item.ToString();
                                 //Console.WriteLine(item);
                             }
                             count++;
@@ -135,15 +135,9 @@ namespace Digital_Safety_Deposit_Box
                     mmf.setCredentials(email, username, status);
                     this.Visible = false;
 
-                    string queryForget = "delete from cs305.savedcredentials where credValue like '" + textBox1.Text + "';";
+                    string queryForget = "delete from cs305.savedcredentials";
                     conDataBase.Open();
                     MySqlCommand cmd = new MySqlCommand(queryForget, conDataBase);
-                    cmd.ExecuteNonQuery();
-                    conDataBase.Close();
-
-                    queryForget = "delete from cs305.savedcredentials where credValue like '" + textBox2.Text + "';";
-                    conDataBase.Open();
-                    cmd = new MySqlCommand(queryForget, conDataBase);
                     cmd.ExecuteNonQuery();
                     conDataBase.Close();
 
@@ -154,14 +148,7 @@ namespace Digital_Safety_Deposit_Box
                     }
                     else
                     {
-                        string queryInsert = "insert into cs305.savedcredentials(credValue) values('" + textBox1.Text + "');";
-
-                        conDataBase.Open();
-                        cmd = new MySqlCommand(queryInsert, conDataBase);
-                        cmd.ExecuteNonQuery();
-                        conDataBase.Close();
-
-                        queryInsert = "insert into cs305.savedcredentials(credValue) values('" + textBox2.Text + "');";
+                        string queryInsert = "insert into cs305.savedcredentials(credUser, credPass) values('" + textBox1.Text + "', '" + textBox2.Text + "');";
 
                         conDataBase.Open();
                         cmd = new MySqlCommand(queryInsert, conDataBase);
