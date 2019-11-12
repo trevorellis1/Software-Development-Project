@@ -7,3 +7,20 @@ C:\Users\seans\source\repos\Software Register\Software Register\obj\Debug\Softwa
 C:\Users\seans\source\repos\Software Register\Software Register\obj\Debug\Software Register.csproj.GenerateResource.cache
 C:\Users\seans\source\repos\Software Register\Software Register\obj\Debug\Software Register.exe
 C:\Users\seans\source\repos\Software Register\Software Register\obj\Debug\Software Register.pdb
+C:\Users\wynn1\Downloads\Software-Development-Project-master\Software-Development-Project-master\Software Register\Software Register\bin\Debug\Software Register.exe.config
+C:\Users\wynn1\Downloads\Software-Development-Project-master\Software-Development-Project-master\Software Register\Software Register\bin\Debug\Software Register.exe
+C:\Users\wynn1\Downloads\Software-Development-Project-master\Software-Development-Project-master\Software Register\Software Register\bin\Debug\Software Register.pdb
+C:\Users\wynn1\Downloads\Software-Development-Project-master\Software-Development-Project-master\Software Register\Software Register\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\wynn1\Downloads\Software-Development-Project-master\Software-Development-Project-master\Software Register\Software Register\bin\Debug\Google.Protobuf.dll
+C:\Users\wynn1\Downloads\Software-Development-Project-master\Software-Development-Project-master\Software Register\Software Register\bin\Debug\MySql.Data.dll
+C:\Users\wynn1\Downloads\Software-Development-Project-master\Software-Development-Project-master\Software Register\Software Register\bin\Debug\Renci.SshNet.dll
+C:\Users\wynn1\Downloads\Software-Development-Project-master\Software-Development-Project-master\Software Register\Software Register\bin\Debug\Google.Protobuf.xml
+C:\Users\wynn1\Downloads\Software-Development-Project-master\Software-Development-Project-master\Software Register\Software Register\bin\Debug\MySql.Data.xml
+C:\Users\wynn1\Downloads\Software-Development-Project-master\Software-Development-Project-master\Software Register\Software Register\bin\Debug\Renci.SshNet.xml
+C:\Users\wynn1\Downloads\Software-Development-Project-master\Software-Development-Project-master\Software Register\Software Register\obj\Debug\Software Register.csprojAssemblyReference.cache
+C:\Users\wynn1\Downloads\Software-Development-Project-master\Software-Development-Project-master\Software Register\Software Register\obj\Debug\Software_Register.RegisterForm.resources
+C:\Users\wynn1\Downloads\Software-Development-Project-master\Software-Development-Project-master\Software Register\Software Register\obj\Debug\Software_Register.Properties.Resources.resources
+C:\Users\wynn1\Downloads\Software-Development-Project-master\Software-Development-Project-master\Software Register\Software Register\obj\Debug\Software Register.csproj.GenerateResource.cache
+C:\Users\wynn1\Downloads\Software-Development-Project-master\Software-Development-Project-master\Software Register\Software Register\obj\Debug\Software Register.csproj.CopyComplete
+C:\Users\wynn1\Downloads\Software-Development-Project-master\Software-Development-Project-master\Software Register\Software Register\obj\Debug\Software Register.exe
+C:\Users\wynn1\Downloads\Software-Development-Project-master\Software-Development-Project-master\Software Register\Software Register\obj\Debug\Software Register.pdb
