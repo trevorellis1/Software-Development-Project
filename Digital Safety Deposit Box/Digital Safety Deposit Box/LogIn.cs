@@ -27,6 +27,17 @@ namespace Digital_Safety_Deposit_Box
         {
             RegisterForm rf = new RegisterForm();
             this.Visible = false;
+            if (rememberMe == false)
+            {
+                string queryForget = "delete from cs305.savedcredentials;";
+                conDataBase.Open();
+                MySqlCommand cmd = new MySqlCommand(queryForget, conDataBase);
+                cmd.ExecuteNonQuery();
+                conDataBase.Close();
+                checkBox1.Checked = false;
+                textBox1.Text = "";
+                textBox2.Text = "";
+            }
             rf.ShowDialog();
         }
 
@@ -40,6 +51,9 @@ namespace Digital_Safety_Deposit_Box
                 MySqlCommand cmd = new MySqlCommand(queryForget, conDataBase);
                 cmd.ExecuteNonQuery();
                 conDataBase.Close();
+                checkBox1.Checked = false;
+                textBox1.Text = "";
+                textBox2.Text = "";
             }
             System.Windows.Forms.Application.Exit();
         }
@@ -131,7 +145,6 @@ namespace Digital_Safety_Deposit_Box
                             count++;
                         }
                     }
-                    
                     mmf.setCredentials(email, username, status);
                     this.Visible = false;
 
@@ -187,6 +200,24 @@ namespace Digital_Safety_Deposit_Box
                 rememberMe = false;
                 //Console.WriteLine(rememberMe);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ForgotForm1 f1 = new ForgotForm1();
+            this.Visible = false;
+            if (rememberMe == false)
+            {
+                string queryForget = "delete from cs305.savedcredentials;";
+                conDataBase.Open();
+                MySqlCommand cmd = new MySqlCommand(queryForget, conDataBase);
+                cmd.ExecuteNonQuery();
+                conDataBase.Close();
+                checkBox1.Checked = false;
+                textBox1.Text = "";
+                textBox2.Text = "";
+            }
+            f1.ShowDialog();
         }
     }
 }

@@ -14,10 +14,12 @@ namespace Digital_Safety_Deposit_Box
     public partial class RegisterForm : Form
     {
         string proStatus = "";
+        string selectedQuestion = "";
         Boolean emailCorrect = false;
         Boolean usernameCorrect = false;
         Boolean passwordCorrect = false;
         Boolean statusCorrect = false;
+        Boolean securityCorrect = false;
         LogIn l = new LogIn();
 
         MySqlConnection conDataBase = new MySqlConnection("SERVER=localhost;DATABASE=cs305;UID=root;PASSWORD=pass;");
@@ -36,8 +38,9 @@ namespace Digital_Safety_Deposit_Box
             if (regEmailBox.Text != "" || regUsernameBox.Text != "" || regPassBox.Text != "" || regConfirmBox.Text != "" || proStatus != "")
             {
                 //query inserting credentials into data table
-                string queryInsert = "insert into cs305.login(userEmail, userName, password, status) values('" +
-                    regEmailBox.Text + "', '" + regUsernameBox.Text + "', '" + regPassBox.Text + "', '" + proStatus + "');";
+                string queryInsert = "insert into cs305.login(userEmail, userName, password, status, secQuestion, secAnswer) values('" +
+                    regEmailBox.Text + "', '" + regUsernameBox.Text + "', '" + regPassBox.Text + "', '" + proStatus + "', '" + selectedQuestion + 
+                    "', '" + secAnswerBox.Text + "');";
                 //query scanning email address
                 string queryEmail = "select * from cs305.login where userEmail like '" + regEmailBox.Text + "';";
                 //query scanning username
@@ -135,6 +138,15 @@ namespace Digital_Safety_Deposit_Box
                     resetBoxes();
                 }
 
+                if (selectedQuestion != "" && secAnswerBox.Text != "")
+                {
+                    securityCorrect = true;
+                }
+                else
+                {
+                    MessageBox.Show("Please select a security question and type in your answer.");
+                }
+
                 MySqlDataAdapter searchStatus = new MySqlDataAdapter(queryStatus, conDataBase);
                 dt = new DataTable();
                 searchStatus.Fill(dt);
@@ -155,13 +167,12 @@ namespace Digital_Safety_Deposit_Box
                     statusCorrect = true;
                 }
 
-                if (emailCorrect == true && usernameCorrect == true && passwordCorrect == true && statusCorrect == true)
+                if (emailCorrect == true && usernameCorrect == true && passwordCorrect == true && statusCorrect == true && securityCorrect == true)
                 {
                     conDataBase.Open();
                     MySqlCommand cmd = new MySqlCommand(queryInsert, conDataBase);
                     cmd.ExecuteNonQuery();
                     conDataBase.Close();
-                    resetBoxes();
                     MessageBox.Show("Login created.");
                     resetBoxes();
                     this.Close();
@@ -198,10 +209,12 @@ namespace Digital_Safety_Deposit_Box
             radioAdmin.Checked = false;
             radioGeneric.Checked = false;
             proStatus = "";
+            selectedQuestion = "";
             emailCorrect = false;
             usernameCorrect = false;
             passwordCorrect = false;
             statusCorrect = false;
+            securityCorrect = false;
         }
 
         private void cancelBTN_Click(object sender, EventArgs e)
@@ -209,6 +222,22 @@ namespace Digital_Safety_Deposit_Box
             resetBoxes();
             this.Close();
             l.makeVisible();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                selectedQuestion = "What is your mother''s name?";
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                selectedQuestion = "What middle school did you go to?";
+            }
+            else if (comboBox1.SelectedIndex == 2)
+            {
+                selectedQuestion = "What is your pet''s name?";
+            }
         }
     }
 }

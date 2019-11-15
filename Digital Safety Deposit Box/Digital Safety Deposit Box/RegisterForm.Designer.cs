@@ -43,6 +43,10 @@
             this.radioGeneric = new System.Windows.Forms.RadioButton();
             this.radioAdmin = new System.Windows.Forms.RadioButton();
             this.cancelBTN = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.secAnswerBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // regEmailLabel
@@ -84,7 +88,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(116, 204);
+            this.label5.Location = new System.Drawing.Point(116, 282);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 4;
@@ -92,7 +96,7 @@
             // 
             // RegisterBTN
             // 
-            this.RegisterBTN.Location = new System.Drawing.Point(200, 238);
+            this.RegisterBTN.Location = new System.Drawing.Point(207, 316);
             this.RegisterBTN.Name = "RegisterBTN";
             this.RegisterBTN.Size = new System.Drawing.Size(75, 23);
             this.RegisterBTN.TabIndex = 5;
@@ -141,7 +145,7 @@
             // radioSuper
             // 
             this.radioSuper.AutoSize = true;
-            this.radioSuper.Location = new System.Drawing.Point(200, 204);
+            this.radioSuper.Location = new System.Drawing.Point(200, 280);
             this.radioSuper.Name = "radioSuper";
             this.radioSuper.Size = new System.Drawing.Size(53, 17);
             this.radioSuper.TabIndex = 13;
@@ -154,7 +158,7 @@
             // 
             this.radioGeneric.AutoSize = true;
             this.radioGeneric.Cursor = System.Windows.Forms.Cursors.Default;
-            this.radioGeneric.Location = new System.Drawing.Point(318, 204);
+            this.radioGeneric.Location = new System.Drawing.Point(318, 280);
             this.radioGeneric.Name = "radioGeneric";
             this.radioGeneric.Size = new System.Drawing.Size(62, 17);
             this.radioGeneric.TabIndex = 14;
@@ -166,7 +170,7 @@
             // radioAdmin
             // 
             this.radioAdmin.AutoSize = true;
-            this.radioAdmin.Location = new System.Drawing.Point(258, 204);
+            this.radioAdmin.Location = new System.Drawing.Point(258, 280);
             this.radioAdmin.Name = "radioAdmin";
             this.radioAdmin.Size = new System.Drawing.Size(54, 17);
             this.radioAdmin.TabIndex = 15;
@@ -177,7 +181,7 @@
             // 
             // cancelBTN
             // 
-            this.cancelBTN.Location = new System.Drawing.Point(281, 238);
+            this.cancelBTN.Location = new System.Drawing.Point(288, 316);
             this.cancelBTN.Name = "cancelBTN";
             this.cancelBTN.Size = new System.Drawing.Size(75, 23);
             this.cancelBTN.TabIndex = 16;
@@ -185,12 +189,55 @@
             this.cancelBTN.UseVisualStyleBackColor = true;
             this.cancelBTN.Click += new System.EventHandler(this.cancelBTN_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "What is your mother\'s name?",
+            "What middle school did you go to?",
+            "What is your pet\'s name?"});
+            this.comboBox1.Location = new System.Drawing.Point(200, 204);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(180, 21);
+            this.comboBox1.TabIndex = 17;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(88, 207);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Security Question:";
+            // 
+            // secAnswerBox
+            // 
+            this.secAnswerBox.Location = new System.Drawing.Point(200, 240);
+            this.secAnswerBox.Name = "secAnswerBox";
+            this.secAnswerBox.Size = new System.Drawing.Size(180, 20);
+            this.secAnswerBox.TabIndex = 19;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(136, 243);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Answer:";
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.secAnswerBox);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.cancelBTN);
             this.Controls.Add(this.radioAdmin);
             this.Controls.Add(this.radioGeneric);
@@ -230,5 +277,9 @@
         private System.Windows.Forms.RadioButton radioGeneric;
         private System.Windows.Forms.RadioButton radioAdmin;
         private System.Windows.Forms.Button cancelBTN;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox secAnswerBox;
+        private System.Windows.Forms.Label label2;
     }
 }
