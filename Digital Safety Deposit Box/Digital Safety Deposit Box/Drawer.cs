@@ -15,18 +15,22 @@ namespace Digital_Safety_Deposit_Box
         public Drawer(String name, String fullPath)
         {
             StorageRecord sr = new StorageRecord();
+            this.isDrawer = true;
             this.parent = sr.getTopDrawer(); 
             this.name = name;
             this.fullPath = fullPath;
-            if (fullPath != null)
+            if (fullPath != null && !Directory.Exists(fullPath))
             {
                 Directory.CreateDirectory(fullPath);
+                sr.getListOfItems().Add(this);
             }
         }
 
+        // Used for creating the top drawer. 
         public Drawer(String fullPath)
         {
             StorageRecord sr = new StorageRecord(true);
+            this.isDrawer = true;
             this.name = sr.getTopDrawerName();
             this.fullPath = fullPath;
             if (fullPath != null)
@@ -37,12 +41,15 @@ namespace Digital_Safety_Deposit_Box
 
         public Drawer(Drawer parent, String name)
         {
+            StorageRecord sr = new StorageRecord();
+            this.isDrawer = true;
             this.name = name;
-            this.parent = parent; 
+            this.parent = parent;  
             this.fullPath = parent.getFullPath() + "\\" + name;
-            if (fullPath != null)
+            if (fullPath != null && !Directory.Exists(fullPath))
             {
                 Directory.CreateDirectory(fullPath);
+                sr.getListOfItems().Add(this);
             }
         }
 
@@ -61,10 +68,11 @@ namespace Digital_Safety_Deposit_Box
             String temp = this.fullPath; 
             String newPath = temp.Replace(this.name, newName);
 
+
             if (Directory.Exists(fullPath) && !Directory.Exists(newPath))
             {
                 Directory.Move(fullPath, newPath);
-                name = newName;
+                this.name = newName;
                 fullPath = newPath;
 
                 return true;
