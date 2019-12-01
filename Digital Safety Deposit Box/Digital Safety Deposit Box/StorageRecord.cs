@@ -14,7 +14,7 @@ namespace Digital_Safety_Deposit_Box
        in the first constructor. The top drawer, called DrawerLib, should be created at bin\debug 
        within the project folder. 
        */ 
-    class StorageRecord
+     class StorageRecord
     {
         protected static ArrayList listOfItems = new ArrayList();
         public static Drawer topDrawer; 
@@ -64,7 +64,7 @@ namespace Digital_Safety_Deposit_Box
             }
         }
 
-        // Returns a list of subdirectories and files directly under the input directory. 
+        // Returns a list of subdirectories and files under the input directory. 
         public ArrayList getChildrenOfDirectory(Drawer drawer) 
         {
             ArrayList results = new ArrayList(); 
@@ -73,13 +73,12 @@ namespace Digital_Safety_Deposit_Box
                 foreach(Item item in listOfItems)
                 {
                     if (Directory.GetFileSystemEntries(drawer.getFullPath()).Contains(item.getFullPath())) {
-                        results.Add(item); 
+                            results.Add(item);
                     }
                 }
             }
             return results; 
         }
-        
         public Drawer getTopDrawer()
         {
             return topDrawer; 
@@ -92,7 +91,7 @@ namespace Digital_Safety_Deposit_Box
 
         public ArrayList getListOfItems()
         {
-            return listOfItems;
+            return listOfItems; 
         }
     }
 }
