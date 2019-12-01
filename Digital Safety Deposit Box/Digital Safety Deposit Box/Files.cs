@@ -8,28 +8,33 @@ using System.Windows.Forms;
 
 namespace Digital_Safety_Deposit_Box
 {
-    class Files : Item
+     class Files : Item
     {
 
         public Files(String name, String fullPath)
         {
             StorageRecord sr = new StorageRecord();
+            this.isDrawer = false; 
             this.name = name;
             this.fullPath = fullPath;
             this.parent = sr.getTopDrawer();
-            if (this.fullPath != null) 
+            if (this.fullPath != null && !File.Exists(fullPath)) 
             {
                 File.Create(fullPath).Close();
-            }
+                sr.getListOfItems().Add(this);
+            } 
         } 
 
         public Files(Drawer parent, String name)
         {
+            StorageRecord sr = new StorageRecord();
+            this.isDrawer = false;
             this.name = name;
             this.fullPath = parent.getFullPath() + "\\" + name;
-            if (this.fullPath != null)
+            if (this.fullPath != null && !File.Exists(fullPath))
             {
                 File.Create(fullPath).Close();
+                sr.getListOfItems().Add(this);
             }
         }
 
