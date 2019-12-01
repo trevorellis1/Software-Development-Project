@@ -11,7 +11,9 @@ namespace Digital_Safety_Deposit_Box
 {
     /* This class contains a list of all the files and drawers within the filesystem. 
        It also initiates the top directory within the system through the addTopDrawer() method used 
-       in the first constructor. */ 
+       in the first constructor. The top drawer, called DrawerLib, should be created at bin\debug 
+       within the project folder. 
+       */ 
     class StorageRecord
     {
         protected static ArrayList listOfItems = new ArrayList();
