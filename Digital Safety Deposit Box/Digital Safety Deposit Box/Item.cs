@@ -20,7 +20,9 @@ namespace Digital_Safety_Deposit_Box
     // Name of the item 
     protected String name;
 
-    public Button button;
+    public PictureBox pictureBox;
+
+    protected bool isDrawer;
 
     public Item()
     {
@@ -56,14 +58,23 @@ namespace Digital_Safety_Deposit_Box
     {
         return this.parent;
     }
+    public PictureBox getPictureBox()
+    {
+        return pictureBox;
+    }
+    public void setPictureBox(PictureBox picture)
+    {
+        this.pictureBox = picture;
+    }
 
-    public Button getButton()
-        {
-            return button; 
-        }
-    public void setButton(Button button)
-        {
-            this.button = button; 
-        }
+    public void setIsDrawer(bool b)
+    {
+        this.isDrawer = b;
+    }
+
+     public bool getIsDrawer()
+     {
+        return this.isDrawer; 
+     }
     }
 }
