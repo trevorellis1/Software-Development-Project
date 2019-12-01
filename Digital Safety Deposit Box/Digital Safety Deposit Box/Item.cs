@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace Digital_Safety_Deposit_Box
 {
+    // Parent class of Drawer and Files. Contains most of their variables and getter and setter methods. 
     class Item {
 
     // Parent directory. 
