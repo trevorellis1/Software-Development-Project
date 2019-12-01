@@ -104,6 +104,13 @@ namespace Digital_Safety_Deposit_Box
         //if you log in
         private void button1_Click(object sender, EventArgs e)
         {
+            /* Creates the top drawer for files and other drawers to be stored in. 
+             * If the system already exists, creates objects of the pre-existing files and folders 
+             * and adds them to a static list in StorageRecord object. 
+             */ 
+            StorageRecord sr = new StorageRecord();
+            sr.addExistingItems(sr.getTopDrawer()); 
+            
             if (textBox1.Text != "" && textBox2.Text != "")
             {
                 int count = 0;
