@@ -57,7 +57,7 @@ namespace Digital_Safety_Deposit_Box
                     }
                     else if (Directory.Exists(item))
                     {
-                        Drawer newDrawer = new Drawer(Path.GetDirectoryName(item), item);
+                        Drawer newDrawer = new Drawer(Path.GetFileName(item), item);
                         listOfItems.Add(newDrawer);
                     }
                 }
