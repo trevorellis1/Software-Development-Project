@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -9,18 +9,13 @@ using System.Windows.Forms;
 
 namespace Digital_Safety_Deposit_Box
 {
-    /* This class contains a list of all the files and drawers within the filesystem. 
-       It also initiates the top directory within the system through the addTopDrawer() method used 
-       in the first constructor. The top drawer, called DrawerLib, should be created at bin\debug 
-       within the project folder. 
-       */ 
-     class StorageRecord
+    class StorageRecord
     {
         protected static ArrayList listOfItems = new ArrayList();
-        public static Drawer topDrawer; 
-        const String topDrawerName = "DrawerLib"; 
+        public static Drawer topDrawer;
+        const String topDrawerName = "DrawerLib";
 
-        public StorageRecord() 
+        public StorageRecord()
         {
             addTopDrawer();
         }
@@ -34,34 +29,61 @@ namespace Digital_Safety_Deposit_Box
         // Adds the top level directory to the record. 
         protected bool addTopDrawer()
         {
-            if(topDrawer == null)
+            if (topDrawer == null)
             {
                 topDrawer = new Drawer(System.IO.Directory.GetCurrentDirectory() + "\\" + topDrawerName);
-                return true; 
+                return true;
             }
-            return false; 
+            return false;
         }
 
         /* Goes through the initial directory and records already existing entries. 
-           Should only be called once at start of program. */ 
+           Should only be called once at start of program. */
         public void addExistingItems(Drawer drawer)
         {
             if (drawer != null)
             {
-                foreach (String item in Directory.GetFileSystemEntries(drawer.getFullPath(), "*", System.IO.SearchOption.AllDirectories)) 
+                foreach (String file in Directory.GetFiles(drawer.getFullPath()))
                 {
-                    if (File.Exists(item))
+                    if (File.Exists(file))
                     {
-                        Files newFiles = new Files(Path.GetFileName(item), item);
-                        listOfItems.Add(newFiles);
+                        Files temp = new Files(drawer, Path.GetFileName(file));
+                        listOfItems.Add(temp);
                     }
-                    else if (Directory.Exists(item))
+                }
+
+                foreach (String item in Directory.GetDirectories(drawer.getFullPath()))
+                {
+
+                    if (Directory.Exists(item))
                     {
-                        Drawer newDrawer = new Drawer(Path.GetFileName(item), item);
-                        listOfItems.Add(newDrawer);
+                        Drawer temp = new Drawer(drawer, Path.GetFileName(item));
+                        listOfItems.Add(temp);
+                        addExistingItems(temp);
                     }
                 }
             }
+        }
+
+    
+    
+
+        public void addExistingFiles(Drawer drawer)
+        {
+            foreach(String item in Directory.GetDirectories(drawer.getFullPath()))
+            {
+                if (Directory.Exists(item))
+                {
+                    Drawer temp = new Drawer(drawer, Path.GetFileName(item));
+                    listOfItems.Add(temp);
+                    addExistingFiles(temp);
+                }
+            }
+        }
+
+        public void addExistingDrawers(Drawer drawer)
+        {
+            
         }
 
         // Returns a list of subdirectories and files under the input directory. 
@@ -79,6 +101,7 @@ namespace Digital_Safety_Deposit_Box
             }
             return results; 
         }
+
         public Drawer getTopDrawer()
         {
             return topDrawer; 
