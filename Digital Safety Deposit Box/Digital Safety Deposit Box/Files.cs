@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Digital_Safety_Deposit_Box
 {
-     class Files : Item
+    class Files : Item
     {
 
         public Files(String name, String fullPath)
@@ -31,6 +31,7 @@ namespace Digital_Safety_Deposit_Box
             this.isDrawer = false;
             this.name = name;
             this.fullPath = parent.getFullPath() + "\\" + name;
+            this.parent = parent; 
             if (this.fullPath != null && !File.Exists(fullPath))
             {
                 File.Create(fullPath).Close();
