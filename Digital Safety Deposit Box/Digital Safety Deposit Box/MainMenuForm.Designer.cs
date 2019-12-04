@@ -36,62 +36,69 @@
             this.updateBTN = new System.Windows.Forms.Button();
             this.exportBTN = new System.Windows.Forms.Button();
             this.profileBTN = new System.Windows.Forms.Button();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.backButton = new System.Windows.Forms.Button();
             this.logoutBTN = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // uploadBTN
             // 
-            this.uploadBTN.Location = new System.Drawing.Point(3, 3);
+            this.uploadBTN.Location = new System.Drawing.Point(3, 32);
             this.uploadBTN.Name = "uploadBTN";
             this.uploadBTN.Size = new System.Drawing.Size(109, 24);
             this.uploadBTN.TabIndex = 0;
             this.uploadBTN.Text = "Upload";
             this.uploadBTN.UseVisualStyleBackColor = true;
+            this.uploadBTN.Click += new System.EventHandler(this.uploadBTN_Click);
             // 
             // searchBTN
             // 
-            this.searchBTN.Location = new System.Drawing.Point(3, 33);
+            this.searchBTN.Location = new System.Drawing.Point(3, 62);
             this.searchBTN.Name = "searchBTN";
             this.searchBTN.Size = new System.Drawing.Size(109, 23);
             this.searchBTN.TabIndex = 1;
             this.searchBTN.Text = "Search";
             this.searchBTN.UseVisualStyleBackColor = true;
+            this.searchBTN.Click += new System.EventHandler(this.searchBTN_Click);
             // 
             // deleteBTN
             // 
-            this.deleteBTN.Location = new System.Drawing.Point(3, 62);
+            this.deleteBTN.Location = new System.Drawing.Point(3, 91);
             this.deleteBTN.Name = "deleteBTN";
             this.deleteBTN.Size = new System.Drawing.Size(109, 23);
             this.deleteBTN.TabIndex = 2;
             this.deleteBTN.Text = "Delete";
             this.deleteBTN.UseVisualStyleBackColor = true;
+            this.deleteBTN.Click += new System.EventHandler(this.deleteBTN_Click);
             // 
             // renameBTN
             // 
-            this.renameBTN.Location = new System.Drawing.Point(3, 91);
+            this.renameBTN.Location = new System.Drawing.Point(3, 120);
             this.renameBTN.Name = "renameBTN";
             this.renameBTN.Size = new System.Drawing.Size(109, 23);
             this.renameBTN.TabIndex = 3;
             this.renameBTN.Text = "Rename";
             this.renameBTN.UseVisualStyleBackColor = true;
+            this.renameBTN.Click += new System.EventHandler(this.renameBTN_Click);
             // 
             // newBTN
             // 
-            this.newBTN.Location = new System.Drawing.Point(3, 120);
+            this.newBTN.Location = new System.Drawing.Point(3, 149);
             this.newBTN.Name = "newBTN";
             this.newBTN.Size = new System.Drawing.Size(109, 23);
             this.newBTN.TabIndex = 4;
             this.newBTN.Text = "New";
             this.newBTN.UseVisualStyleBackColor = true;
+            this.newBTN.Click += new System.EventHandler(this.newBTN_Click);
             // 
             // updateBTN
             // 
-            this.updateBTN.Location = new System.Drawing.Point(3, 149);
+            this.updateBTN.Location = new System.Drawing.Point(3, 178);
             this.updateBTN.Name = "updateBTN";
             this.updateBTN.Size = new System.Drawing.Size(109, 23);
             this.updateBTN.TabIndex = 5;
@@ -100,7 +107,7 @@
             // 
             // exportBTN
             // 
-            this.exportBTN.Location = new System.Drawing.Point(3, 178);
+            this.exportBTN.Location = new System.Drawing.Point(3, 207);
             this.exportBTN.Name = "exportBTN";
             this.exportBTN.Size = new System.Drawing.Size(109, 23);
             this.exportBTN.TabIndex = 6;
@@ -109,22 +116,17 @@
             // 
             // profileBTN
             // 
-            this.profileBTN.Location = new System.Drawing.Point(3, 207);
+            this.profileBTN.Location = new System.Drawing.Point(3, 236);
             this.profileBTN.Name = "profileBTN";
             this.profileBTN.Size = new System.Drawing.Size(109, 23);
             this.profileBTN.TabIndex = 7;
             this.profileBTN.Text = "Profile";
             this.profileBTN.UseVisualStyleBackColor = true;
-            // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(633, 0);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(19, 432);
-            this.vScrollBar1.TabIndex = 8;
+            this.profileBTN.Click += new System.EventHandler(this.profileBTN_Click);
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Controls.Add(this.backButton);
             this.flowLayoutPanel1.Controls.Add(this.uploadBTN);
             this.flowLayoutPanel1.Controls.Add(this.searchBTN);
             this.flowLayoutPanel1.Controls.Add(this.deleteBTN);
@@ -140,9 +142,20 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(118, 432);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
+            // backButton
+            // 
+            this.backButton.Enabled = false;
+            this.backButton.Location = new System.Drawing.Point(3, 3);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(109, 23);
+            this.backButton.TabIndex = 9;
+            this.backButton.Text = "Back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // logoutBTN
             // 
-            this.logoutBTN.Location = new System.Drawing.Point(3, 236);
+            this.logoutBTN.Location = new System.Drawing.Point(3, 265);
             this.logoutBTN.Name = "logoutBTN";
             this.logoutBTN.Size = new System.Drawing.Size(109, 23);
             this.logoutBTN.TabIndex = 8;
@@ -150,13 +163,18 @@
             this.logoutBTN.UseVisualStyleBackColor = true;
             this.logoutBTN.Click += new System.EventHandler(this.logoutBTN_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Controls.Add(this.vScrollBar1);
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(136, 6);
+            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(148, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(652, 432);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(652, 450);
             this.flowLayoutPanel2.TabIndex = 10;
             // 
             // MainMenuForm
@@ -170,7 +188,6 @@
             this.Name = "MainMenuForm";
             this.Text = "Digital Safety Deposit Box - Main Menu";
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -185,9 +202,12 @@
         private System.Windows.Forms.Button updateBTN;
         private System.Windows.Forms.Button exportBTN;
         private System.Windows.Forms.Button profileBTN;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button logoutBTN;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Button backButton;
     }
 }

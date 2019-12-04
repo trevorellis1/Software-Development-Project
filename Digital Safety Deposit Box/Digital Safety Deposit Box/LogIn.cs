@@ -108,9 +108,9 @@ namespace Digital_Safety_Deposit_Box
              * If the system already exists, creates objects of the pre-existing files and folders 
              * and adds them to a static list in StorageRecord object. 
              */ 
-           // StorageRecord sr = new StorageRecord();
-           // sr.addExistingItems(sr.getTopDrawer()); 
-            
+            StorageRecord sr = new StorageRecord();
+            sr.addExistingItems(sr.getTopDrawer()); 
+
             if (textBox1.Text != "" && textBox2.Text != "")
             {
                 int count = 0;
@@ -225,6 +225,11 @@ namespace Digital_Safety_Deposit_Box
                 textBox2.Text = "";
             }
             f1.ShowDialog();
+        }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

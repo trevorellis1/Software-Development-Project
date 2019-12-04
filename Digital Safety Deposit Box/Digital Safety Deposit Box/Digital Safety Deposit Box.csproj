@@ -39,9 +39,11 @@
     <Reference Include="Google.Protobuf, Version=3.10.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.10.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.18\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
     </Reference>
@@ -65,6 +67,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DelegateEvent.cs" />
+    <Compile Include="DragAndDrop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DragAndDrop.Designer.cs">
+      <DependentUpon>DragAndDrop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StorageRecord.cs" />
+    <Compile Include="Drawer.cs" />
+    <Compile Include="Files.cs" />
     <Compile Include="ForgotForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +89,7 @@
     <Compile Include="ForgotForm2.Designer.cs">
       <DependentUpon>ForgotForm2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Item.cs" />
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +116,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DragAndDrop.resx">
+      <DependentUpon>DragAndDrop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ForgotForm1.resx">
       <DependentUpon>ForgotForm1.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +145,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -143,6 +160,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\drawerIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\fileIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\UserIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
